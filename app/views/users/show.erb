@@ -1,0 +1,6 @@
+<h1>@<%= @user.username %> Leads</h1>
+
+
+<% @user.leads.each do |lead| %>
+    <p><a href="/leads/<%= lead.id %>"><%= lead.content %></a></p>
+<% end %>

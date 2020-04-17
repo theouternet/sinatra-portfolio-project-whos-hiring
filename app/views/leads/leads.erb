@@ -1,0 +1,8 @@
+<h1>Bienvidos, @<%= current_user.username %></h1>
+
+<% Lead.all.each do |lead| %>
+    <p>
+        <a href="/users/<%= lead.user.slug %>">@<%= lead.user.username %></a>:&nbsp;&nbsp; 
+        <a href="/leads/<%= lead.id %>"><%= lead.content %></a>
+    </p>
+<% end %>
