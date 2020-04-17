@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Bootcamp Grad Job Leads</title>
+    <style type="text/css">
+      body {
+        font-family: Helvetica, sans-serif;
+        color: #484848;
+        line-height: 1.3em;
+      }
+      .button {
+        border: 1px solid;
+        border-radius: 5px;
+        padding: 5px;
+        margin: 5px;
+      }
+      a:link {
+        color: #484848;
+        text-decoration: none;
+      }
+      a:visited {
+        color: #484848;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #484848;
+        text-decoration: underline;
+      }
+      a:active {
+        color: #484848;
+        text-decoration: underline;
+      }
+      h4 {
+        margin-bottom: 0;
+      }
+      hr {padding: 5px, 0, 5px, 0;}
+  </style>
+  </head>
+  <body>
+
+    <%= yield %>
+    <br>
+    <% if logged_in? %>
+      <div style="padding-top: 20px;">
+      <a href="/leads/new" class="button">Create Lead</a>
+      <a href="/leads" class="button">All Leads</a>
+      <a href="/logout" class="button">Log Out</a>
+      </div>
+    <% end %>
+  </body>
+</html>
