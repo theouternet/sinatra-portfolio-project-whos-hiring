@@ -1,0 +1,11 @@
+<h1><a href="/users/<%= @lead.user.slug %>">@<%= @lead.user.username %></a> Lead Detail</h1>
+
+<p><%= @lead.content %></p>
+
+<% if @lead.user_id == current_user.id %>
+    <a class="button" href="/leads/<%= @lead.id %>/edit" value="Edit Lead">Edit Lead</a>
+    <form method="post" action="/leads/<%= @lead.id %>" style="display: inline;">
+        <input id="hidden" type="hidden" name="_method" value="Delete">
+        <input type="submit" value="Delete Lead" class="button" id="Delete Lead">
+    </form>
+<% end %>

@@ -9,8 +9,7 @@ class CreateLeads < ActiveRecord::Migration[5.2]
       t.string :hiring_manager_job_title(s)
       t.string :willing_to_consider_referral?
       t.string :willing_to_consider_informational_interview?
-      t.string :referrer_name
-      t.string :referrer_email
+      t.string :preferred_method_of_contact
       t.string :notes
     end
   end
