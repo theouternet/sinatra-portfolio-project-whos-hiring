@@ -1,20 +1,20 @@
 <h2>Edit Lead</h2>
 
-<form method="post" action="/lead/<%=@lead.id%>">
+<form method="post" action="/leads/<%=@lead.id%>">
   <input id="hidden" type="hidden" name="_method" value="PATCH">
 
-  <input type="text" name="content" value="<%= @lead.company %>">
-  <p>Company: <input type="text" name="company" value="<%= @lead.company %>" ></p>
-  <p>Company Website: <input type="text" name="company_website" value="<%= @lead.company_website" ></p>
-  <p>My Company Affiliation: <input type="text" name="company_affiliation" value="<%= @lead.company_affiliation" ></p>
-  <p>Job Titles Given To Bootcamp Grads: <input type="text" name="bootcamp_grad_job_titles" value="<%= @lead.bootcamp_grad_job_titles" ></p>
-  <p>Hiring Manager(s) Name(s): <input type="text" name="hiring_manager_name" value="<%= @lead.hiring_manager_name" ></p>
-  <p>Hiring Manager(s) Job Title(s): <input type="text" name="hiring_manager_job_title" value="<%= @lead.hiring_manager_job_title" ></p>
-  <p>Am I Willing To Consider Referring Alumni?: <input type="text" name="willing_to_consider_referral?" value="<%= @lead.willing_to_consider_referral?" ></p>
-  <p>Am I Willing To Consider Giving Alumni An Informational Interview?: <input type="text" name="willing_to_consider_informational_interview?" value="<%= @lead.willing_to_consider_informational_interview?" ></p>
-  <p>Preferred Method To Contact Me: <input type="text" name="preferred_method_of_contact" value="<%= @lead.preferred_method_of_contact" ></p>
-  <p>Notes: <input type="text" name="notes" value="<%= @lead.notes" ></p>
+  <p>Company: </p><input type="text" name="company" value="<%= @lead.company %>" > </br>
+  <p>Company Website: </p><input type="text" name="company_website" value="<%= @lead.company_website%>" > </br>
+  <p>My Company Affiliation: </p><input type="text" name="company_affiliation" value="<%= @lead.company_affiliation%>" ></br>
+  <p>Job Titles Given To Bootcamp Grads: </p><input type="text" name="bootcamp_grad_job_titles" value="<%= @lead.bootcamp_grad_job_titles%>" > </br>
+  <p>Hiring Manager(s) Name(s): </p><input type="text" name="hiring_manager_name" value="<%= @lead.hiring_manager_name%>" > </br>
+  <p>Hiring Manager(s) Job Title(s): </p><input type="text" name="hiring_manager_job_title" value="<%= @lead.hiring_manager_job_title%>" > </br>
+  <p>Am I Willing To Consider Referring Alumni?: </p><input type="text" name="willing_to_consider_referral?" value="<%= @lead.willing_to_consider_referral?%>" > </br>
+  <p>Am I Willing To Consider Giving Alumni An Informational Interview?: </p><input type="text" name="willing_to_consider_informational_interview?" value="<%= @lead.willing_to_consider_informational_interview?%>" > </br>
+  <p>Preferred Method To Contact Me: </p><input type="text" name="preferred_method_of_contact" value="<%= @lead.preferred_method_of_contact%>" > </br>
+  <p>Notes: </p><input type="text" name="notes" value="<%= @lead.notes%>" > </br>
+  </br>
 
 
-  <input type="submit" value="submit">
+  <input type="submit" value="Submit">
 </form>

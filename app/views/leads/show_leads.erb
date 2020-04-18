@@ -1,17 +1,19 @@
-<h1><a href="/users/<%= @lead.user.slug %>">@<%= @lead.user.username %></a> Lead Detail</h1>
+<h1><a href="/users/<%= @lead.user.slug %>">@<%= @lead.user.username %></a> - New Lead Detail</h1>
 
-<p>
-        <%= @lead.company %>
-        <%= @lead.company_website %>
-        <%= @lead.company_affiliation %>
-        <%= @lead.bootcamp_grad_job_titles %>
-        <%= @lead.hiring_manager_name %>
-        <%= @lead.hiring_manager_job_title %>
-        <%= @lead.willing_to_consider_referral? %>
-        <%= @lead.willing_to_consider_informational_interview? %>
-        <%= @lead.preferred_method_of_contact %>
-        <%= @lead.notes %>
-</p>
+</br>
+      <p>Company: <%= @lead.company %> </p>
+        <p>Company Website: <%= @lead.company_website %></p>
+        <p>Company Affiliation: <%= @lead.company_affiliation %></p>
+       <p>Bootcamp Grad Job Title(s): <%= @lead.bootcamp_grad_job_titles %></p>
+       <p>Hiring Manager Name(s): <%= @lead.hiring_manager_name %></p>
+      <p> Hiring Manager Job Title(s): <%= @lead.hiring_manager_job_title %></p>
+       <p>Willing To Consider Referral?: <%= @lead.willing_to_consider_referral? %></p>
+       <p>Willing To Consider Informational Interview?: <%= @lead.willing_to_consider_informational_interview? %></p>
+        <p>Preferred Method Of Contact: <%= @lead.preferred_method_of_contact %></p>
+       <p>Notes: <%= @lead.notes %></p>
+       
+       </br>
+
 
 
 <% if @lead.user_id == current_user.id %>
