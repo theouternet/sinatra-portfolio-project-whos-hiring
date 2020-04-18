@@ -3,15 +3,15 @@
 <% Lead.all.each do |lead| %>
     <p>
         <a href="/users/<%= lead.user.slug %>">@<%= lead.user.username %></a>:&nbsp;&nbsp; 
-        <a href="/leads/<%= lead.id %>"><%= lead.company %></a>
-        <a href="/leads/<%= lead.id %>"><%= lead.company_website %></a>
-        <a href="/leads/<%= lead.id %>"><%= lead.company_affiliation %></a>
-        <a href="/leads/<%= lead.id %>"><%= lead.bootcamp_grad_job_titles %></a>
-        <a href="/leads/<%= lead.id %>"><%= lead.hiring_manager_name %></a>
-        <a href="/leads/<%= lead.id %>"><%= lead.hiring_manager_job_title %></a>
-        <a href="/leads/<%= lead.id %>"><%= lead.willing_to_consider_referral %></a>
-        <a href="/leads/<%= lead.id %>"><%= lead.willing_to_consider_informational_interview %></a>
-        <a href="/leads/<%= lead.id %>"><%= lead.preferred_method_of_contact %></a>
+        <p>Company: </p><a href="/leads/<%= lead.id %>"><%= lead.company %></a></br>
+        <p>Company Website: </p><a href="/leads/<%= lead.id %>"><%= lead.company_website %></a></br>
+        <p>My Affiliation To Company: </p><a href="/leads/<%= lead.id %>"><%= lead.company_affiliation %></a></br>
+        <p>Bootcamp Grad Job Title(s): </p><a href="/leads/<%= lead.id %>"><%= lead.bootcamp_grad_job_titles %></a></br>
+        <p>Hiring Manager Name(s): </p><a href="/leads/<%= lead.id %>"><%= lead.hiring_manager_name %></a></br>
+        <p>Hiring Manager Job Title(s): </p><a href="/leads/<%= lead.id %>"><%= lead.hiring_manager_job_title %></a></br>
+        <p>Willing To Consider Referral?: </p><a href="/leads/<%= lead.id %>"><%= lead.willing_to_consider_referral %></a></br>
+        <p>Willing To Consider Informational Interview?: </p><a href="/leads/<%= lead.id %>"><%= lead.willing_to_consider_informational_interview %></a></br>
+        <p>Notes: </p><a href="/leads/<%= lead.id %>"><%= lead.preferred_method_of_contact %></a></br>
         <a href="/leads/<%= lead.id %>"><%= lead.notes %></a>
 
     </p>
