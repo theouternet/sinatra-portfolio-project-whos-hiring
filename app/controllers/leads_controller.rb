@@ -28,7 +28,7 @@ class LeadsController < ApplicationController
     get '/leads/:id' do
         if logged_in?
             @lead = Lead.find_by_id(params[:id])
-            erb :'/leads/show_lead'
+            erb :'/leads/show_leads'
         else
             redirect '/login'
         end
@@ -51,19 +51,19 @@ class LeadsController < ApplicationController
     patch '/leads/:id' do
         @lead = Lead.find_by_id(params[:id])
         if @lead.user_id == current_user.id
-            @article.company = params[:company]
-            @article.company_name = params[:company_name]
-            @article.company_affiliation = params[:company_affiliation]
-            @article.bootcamp_grad_job_titles = params[:bootcamp_grad_job_titles]
-            @article.hiring_manager_name = params[:hiring_manager_name]
-            @article.hiring_manager_job_title = params[:hiring_manager_job_title]
-            @article.willing_to_consider_referral = params[:willing_to_consider_referral]
-            @article.willing_to_consider_informational_interview = params[:willing_to_consider_informational_interview]
-            @article.preferred_method_of_contact = params[:preferred_method_of_contact]
-            @article.notes = params[:notes]
-            @article.company = params[:company]
+            @lead.company = params[:company]
+            @lead.company_website = params[:company_website]
+            @lead.company_affiliation = params[:company_affiliation]
+            @lead.bootcamp_grad_job_titles = params[:bootcamp_grad_job_titles]
+            @lead.hiring_manager_name = params[:hiring_manager_name]
+            @lead.hiring_manager_job_title = params[:hiring_manager_job_title]
+            @lead.willing_to_consider_referral = params[:willing_to_consider_referral]
+            @lead.willing_to_consider_informational_interview = params[:willing_to_consider_informational_interview]
+            @lead.preferred_method_of_contact = params[:preferred_method_of_contact]
+            @lead.notes = params[:notes]
+            @lead.company = params[:company]
 
-            @article.save
+            @lead.save
             redirect "/leads/#{@lead.id}"
             else
             redirect "/leads/#{@lead.id}"
