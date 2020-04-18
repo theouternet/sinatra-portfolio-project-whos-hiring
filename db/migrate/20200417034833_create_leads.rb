@@ -11,6 +11,7 @@ class CreateLeads < ActiveRecord::Migration[5.2]
       t.string :willing_to_consider_informational_interview?
       t.string :preferred_method_of_contact
       t.string :notes
+      t.integer :user_id
     end
   end
 end
