@@ -1,6 +1,18 @@
 <h1><a href="/users/<%= @lead.user.slug %>">@<%= @lead.user.username %></a> Lead Detail</h1>
 
-<p><%= @lead.content %></p>
+<p>
+        <%= @lead.company %>
+        <%= @lead.company_website %>
+        <%= @lead.company_affiliation %>
+        <%= @lead.bootcamp_grad_job_titles %>
+        <%= @lead.hiring_manager_name %>
+        <%= @lead.hiring_manager_job_title %>
+        <%= @lead.willing_to_consider_referral? %>
+        <%= @lead.willing_to_consider_informational_interview? %>
+        <%= @lead.preferred_method_of_contact %>
+        <%= @lead.notes %>
+</p>
+
 
 <% if @lead.user_id == current_user.id %>
     <a class="button" href="/leads/<%= @lead.id %>/edit" value="Edit Lead">Edit Lead</a>
