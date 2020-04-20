@@ -18,6 +18,8 @@ $ #ensure database is created and merged
 $ shotgun
 $ #visit site in browser
 
+Create an account, for now with a throwaway email until privacy measures can be implemented. Create a job lead, which is defined as a company who has demonstrated a willingness to hire bootcamp grads at any time. Fill in as many fields as possible, willingness to meet with and refer your fellow bootcamp grads is encouraged but not mandatory.
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/theouternet/sinatra-portfolio-project-whos-hiring/. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
