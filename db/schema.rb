@@ -19,16 +19,17 @@ ActiveRecord::Schema.define(version: 2020_04_17_034833) do
     t.string "bootcamp_grad_job_titles"
     t.string "hiring_manager_name"
     t.string "hiring_manager_job_title"
-    t.string "willing_to_consider_referral?"
-    t.string "willing_to_consider_informational_interview?"
+    t.string "willing_to_consider_referral"
+    t.string "willing_to_consider_informational_interview"
     t.string "preferred_method_of_contact"
     t.string "notes"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name"
+    t.string "username"
     t.string "email"
-    t.string "password"
+    t.string "password_digest"
   end
 
 end
