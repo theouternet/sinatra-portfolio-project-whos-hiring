@@ -1,16 +1,27 @@
 default: &default
-  adapter: 'postgresql'
-  database: 'db/development.sqlite'
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # https://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
-    host: localhost
-    user: ssh
-    password: ssh
-
-test:
-  <<: *default
-  database: 'db/test.sqlite'  
+  database: whos_hiring_development
   host: localhost
   user: ssh
   password: ssh
+
+test:
+  <<: *default
+  database: whos_hiring_test
+  host: localhost
+  user: ssh
+  password: ssh
+
+  
+production:
+  <<: *default
+  database: whos_hiring_production
+  username: whos_hiring
+  password: <%= ENV['WHOS_HIRING_DATABASE_PASSWORD'] %>
