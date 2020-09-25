@@ -1,10 +1,16 @@
 default: &default
-  adapter: 'sqlite3'
+  adapter: 'postgresql'
   database: 'db/development.sqlite'
 
 development:
   <<: *default
+    host: localhost
+    user: ssh
+    password: ssh
 
 test:
   <<: *default
-  database: 'db/test.sqlite'
+  database: 'db/test.sqlite'  
+  host: localhost
+  user: ssh
+  password: ssh
