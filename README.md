@@ -1,4 +1,4 @@
-# sinatra-portfolio-project-whos-hiring
+# job-leads
 
 A place for anyone to report companies hiring Bootcamp alumni and provide actionable data.
 
